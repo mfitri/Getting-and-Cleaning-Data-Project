@@ -49,4 +49,4 @@ finalData = cleanedData[,names(cleanedData)];
 # Summarizing the finalDataN table to include just the mean of each variable for each activity and each subject
 tidyData= aggregate(finalData[,names(finalData) != c('Subject','Activity')],by=list(Activity=finalData$Activity, Subject = finalData$Subject),mean);
 # Export the tidyData set 
-write.table(tidyData, './tidy.txt',row.names=TRUE,sep='\t')
+write.table(tidyData, './tidy.txt',row.names=FALSE')
